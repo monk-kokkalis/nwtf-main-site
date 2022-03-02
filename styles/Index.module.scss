@@ -1,0 +1,57 @@
+.Main {
+    background-image: url("/images/main-background.jpg");
+    min-height: 100vh;
+    position: relative;
+    $color: #fff;
+
+    header {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        gap: 70px;
+        padding: 30px 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        div.logo {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+
+            li {
+                a {
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    section.main {
+        min-height: 100vh;
+        position: relative;
+        div.heading {
+            color: $color;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            top: 25%;
+            transform: translateX(-50%);
+            width: 100%;
+    
+            h1 {
+                font-size: 36px;
+            }
+        
+            h2 {
+                font-size: 20px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
