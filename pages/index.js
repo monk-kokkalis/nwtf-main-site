@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Style from 'styles/Index.module.scss';
+// components
+import Main from 'components/Index/Main/Main';
 
-export default function Home() {
+function Index() {
     return (
         <div className={Style.Main}>
             <Head>
@@ -31,13 +33,9 @@ export default function Home() {
                     </li>
                 </ul>
             </header>
-
-            <section className={Style.main}>
-                <div className={Style.heading}>
-                    <h1>Master skills that you can use</h1>
-                    <h2>Learn techincal skills that are relevant to current industries.</h2>
-                </div>
-            </section>
+            <Main />
         </div>
     )
 }
+
+export default Index;
