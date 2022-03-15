@@ -1,7 +1,7 @@
 @use 'styles/variables';
 .Main {
     color: variables.$text-color;
-    padding: 100px variables.$horizontal-padding;
+    padding: 120px variables.$horizontal-padding;
 
     .heading {
         font-size: 40px;

@@ -4,6 +4,7 @@ import Style from 'styles/Index.module.scss';
 // components
 import Main from 'components/Index/Main/Main';
 import Spotlight from 'components/Index/Spotlight/Spotlight';
+import CountSummary from 'components/Index/CountSummary/CountSummary';
 
 function Index() {
     return (
@@ -36,6 +37,7 @@ function Index() {
             </header>
             <Main />
             <Spotlight />
+            <CountSummary />
         </div>
     )
 }
