@@ -5,6 +5,7 @@ import Style from 'styles/Index.module.scss';
 import Main from 'components/Index/Main/Main';
 import Spotlight from 'components/Index/Spotlight/Spotlight';
 import CountSummary from 'components/Index/CountSummary/CountSummary';
+import Features from 'components/Index/Features/Features';
 
 function Index() {
     return (
@@ -38,6 +39,7 @@ function Index() {
             <Main />
             <Spotlight />
             <CountSummary />
+            <Features />
         </div>
     )
 }
