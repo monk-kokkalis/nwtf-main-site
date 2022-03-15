@@ -1,0 +1,64 @@
+@use 'styles/variables';
+.Main {
+    color: variables.$text-color;
+    padding: 100px variables.$horizontal-padding;
+
+    .heading {
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 19px;
+        font-weight: 300;
+        margin: 30px auto 0 auto;
+        max-width: 700px;
+        text-align: center;
+    }
+
+    .imageSection {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        div.imageContainer {
+            flex: 0 1 49%;
+            min-height: 300px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        div.information {
+            background-color: #439FE0;
+            color: #fff;
+            display: flex;
+            flex: 0 1 49%;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 22px;
+                font-weight: 600;
+                padding: 0 20px;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+}

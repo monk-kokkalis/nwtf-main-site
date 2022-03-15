@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Style from 'styles/Index.module.scss';
 // components
 import Main from 'components/Index/Main/Main';
+import Spotlight from 'components/Index/Spotlight/Spotlight';
 
 function Index() {
     return (
@@ -34,6 +35,7 @@ function Index() {
                 </ul>
             </header>
             <Main />
+            <Spotlight />
         </div>
     )
 }
