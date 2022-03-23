@@ -1,5 +1,5 @@
+import {useRef, useState} from 'react';
 import Head from 'next/head'
-import Image from 'next/image'
 import Style from 'styles/Index.module.scss';
 // components
 import Main from 'components/Index/Main/Main';
@@ -7,8 +7,29 @@ import Spotlight from 'components/Index/Spotlight/Spotlight';
 import CountSummary from 'components/Index/CountSummary/CountSummary';
 import PopularCourses from 'components/Index/PopularCourses/PopularCourses';
 import Features from 'components/Index/Features/Features';
-
+// elements
+import {Button, Menu, MenuItem} from '@mui/material';
 function Index() {
+    const servicesButtonRef = useRef();
+    const [menuVisible, setMenuVisible] = useState(false);
+
+    const onMouseEnter = () => {
+        setMenuVisible(true);
+    }
+
+    const hideMenu = () => {
+        setMenuVisible(false);
+    }
+
+    const onServicesClick = () => {
+        setMenuVisible(true);
+    }
+
+    const onTrainingClick = () => {
+        window.open('http://localhost:4000/courses', '_blank');
+        hideMenu();
+    }
+
     return (
         <div className={Style.Main}>
             <Head>
@@ -33,7 +54,18 @@ function Index() {
                         <a href="#">Pricing</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <Button
+                            {...{onMouseEnter}}
+                            onClick={onServicesClick}
+                            ref={servicesButtonRef}
+                            className={Style.servicesButton}>Services</Button>
+                             <Menu
+                                anchorEl={servicesButtonRef.current}
+                                open={menuVisible}
+                                onClose={() => setMenuVisible(false)}>
+                                <MenuItem onClick={onTrainingClick}>Training</MenuItem>
+                                <MenuItem onClick={hideMenu}>Workforce</MenuItem>
+                            </Menu>
                     </li>
                 </ul>
             </header>
